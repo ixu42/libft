@@ -26,7 +26,7 @@ static void	create_list(t_lst **list, int fd, int *malloc_err, int *read_err)
 			return ;
 		}
 		chars_read = read(fd, buf, BUFFER_SIZE);
-		if (chars_read == -1 || (chars_read == 0 && list[fd] == NULL))
+		if (chars_read <= 0)
 		{
 			free(buf);
 			*read_err = -chars_read;
