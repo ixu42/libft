@@ -34,7 +34,7 @@ typedef struct s_dprintf
 	int	sign;
 }	t_dprintf;
 
-// ft_print() function
+// ft_dprintf() function
 int			ft_dprintf(int fd, const char *format, ...);
 
 // funcs for analyzing or modifying flags
